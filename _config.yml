@@ -97,11 +97,10 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Jr. Web Front-end Developer"
   location         : "Korea"
-  email            : "yhancsx@gmail.com"
   links:
-    - label: "Email"
+    - label: "yhancsx@gmail.com"
       icon: "fas fa-fw fa-envelope-square"
-       url: "yhancsx@gmail.com"
+      url: "yhancsx@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
