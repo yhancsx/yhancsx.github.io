@@ -3,7 +3,7 @@ published: true
 title: "Javascript study list"  
 category: js  
 tags:
-  - js
+  - javascript
   - study
   - front-end
 comments: true
