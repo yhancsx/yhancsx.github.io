@@ -47,7 +47,6 @@ baz 변수는 자신이 포함된 블록의 scope(Lexical Environment)에 정의
 console.log(a); // => undefined
 var a = 2;
 
-
 var b = new func();
 function func() {
     this.a = 1;
