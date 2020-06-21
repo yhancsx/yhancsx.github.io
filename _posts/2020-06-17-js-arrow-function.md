@@ -77,7 +77,7 @@ var yhan = {
 }
 yhan.printFriends(); // => yhan knows kate
 ```
-일반 function 은 만들어진 상황에 따라 다른 this 바인딩이 일어난다.
+일반 function 은 호출되는 상황에 따라 다른 this 바인딩이 일어난다.
 - 생성자 함수: 생성된 인스턴스
 - 객체 메소드: 해당 객체
 - 일반/내부/콜백 함수: window(브라우자) or undefined(strict mode)
@@ -168,7 +168,7 @@ arrow function으로 정의하면 전역객체인 window를 가리킨다.
 화살표 함수에서는 본문에 yield 키워드를 사용할 수 없다.
 
 ## References
-- [Must know About Fontent > ES6](https://github.com/baeharam/Must-Know-About-Frontend/blob/master/Notes/javascript/es6.md)  
+- [Must know About Fontend > ES6](https://github.com/baeharam/Must-Know-About-Frontend/blob/master/Notes/javascript/es6.md)  
 - [MDN > 화살표함수](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/%EC%95%A0%EB%A1%9C%EC%9A%B0_%ED%8E%91%EC%85%98)  
 - [PoiemaWeb > 화살표함수](https://poiemaweb.com/es6-arrow-function)
 - \[ECMAScript6, 두고두고보는 자바스크립트 표준 레퍼런스\] 김영보, 루비페이퍼, 2017
