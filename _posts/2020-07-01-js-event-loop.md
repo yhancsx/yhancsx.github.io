@@ -16,7 +16,7 @@ tags:
 Javascript 는 싱글 스레드(single-thread) 기반 언어이다. 
 그럼에도 불구하고 어떻게 동시에 여러 작업을 비동기로 처리할 수 있는 것일까?
 
-![Javascript environment](../assets/images/js-event-loop_1.png)
+![Javascript environment](https://github.com/yhancsx/yhancsx.github.io/raw/master/assets/images/js-event-loop_1.png)
 
 ## Call stack
 Javascript 엔진(e.g., V8 Engine)은 실행 컨택스트 및 원시타입(숫자, 문자열 등)을 저장하는 Call stack, 참조타입(객체, 배열, 함수 등)을 저장하는 Heap 메모리 구조를 가진다.  
@@ -25,10 +25,10 @@ Javascript 엔진(e.g., V8 Engine)은 실행 컨택스트 및 원시타입(숫�
   
 [Call Stack 작동방식 그림 참조](https://hudi.kr/%EB%B9%84%EB%8F%99%EA%B8%B0%EC%A0%81-javascript-%EC%8B%B1%EA%B8%80%EC%8A%A4%EB%A0%88%EB%93%9C-%EA%B8%B0%EB%B0%98-js%EC%9D%98-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%B2%98%EB%A6%AC-%EB%B0%A9%EB%B2%95/)
 
-![debug of call stack in browser](../assets/images/js-event-loop_2.png)
+![debug of call stack in browser](https://github.com/yhancsx/yhancsx.github.io/raw/master/assets/images/js-event-loop_2.png)
 bar, foo 함수가 차례로 호출되어 Call Stack에 쌓인 모습이다.
 
-> 전역 환경에서 실행되는 코드는 한 단위의 코드블록으로써 가상의 익명함수로 감싸져 있다고 생각하는 것이 좋다. 
+> 전역 환경에서 실행되는 코드는 한 단위의 코드블록으로써 가상의 익명함수(anonymous)로 감싸져 있다고 생각하는 것이 좋다. 
 > 따라서 위의 코드의 첫 줄이 실행될 때에 호출 스택의 맨 아래에 익명 함수가 하나 추가되며, 마지막 라인까지 실행되고 나면 스택에서 제거된다.
 
 
@@ -48,13 +48,13 @@ Task Queue 는 Queue (First come, First served) 형태의 자료구조를 사용
 이 Callback 함수들은 Javascript 엔진의 Call Stack 영역의 모든 작업이 완료되면 (Call Stack이 비워지면) 순서대로 Call Stack으로 이동한다.  
 이때, Call Stack의 상태를 확인하고 Task Queue에 이동할 Task가 존재하는지 판단하여 옮기는 작업을 Event Loop가 담당한다.  
 
-```javscript
+```javascript
 while (queue.waitForMessage()) {
     queue.processNextMessage();
 } 
 ```
 Event loop를 위와 같은 코드로 나타낼 수 있다.  
-__현재 실행중인 태스크가 없는지__와 __태스크 큐에 태스크가 있는지__를 지속적으로 검사하며 전달하는 일을 한다.
+**현재 실행중인 태스크가 없는지**와 **태스크 큐에 태스크가 있는지**를 지속적으로 검사하며 전달하는 일을 한다.
 
 ```javascript
 setTimeout(function() {
@@ -64,9 +64,9 @@ console.log('sync');
 
 Result:
 > sync
-> asyn 
+> async
 ```
-setTimeout의 설정 시간이 0이라고 해도 Web API, Task Queue에 추가 되기 때문에 Call Stack의 작업들이 모두 완료된 후 실행 되게 된다.  
+setTimeout의 설정 시간이 0이라고 해도 Web API, Task Queue을 거치기 때문에 Call Stack의 작업들이 모두 완료된 후 실행 되게 된다.  
 즉, setTimeout의 두번째 인자로 전달되는 시간은 정확히 그 시간뒤에 실행된다는 의미보다는 __최소지연시간__ 이라는 뜻에 가깝다.   
 (크롬에서는 최소 단위로 4ms를 사용하므로 setTimeout(callback, 0)은 setTimeout(callback, 4)와 똑같이 작동한다.)
 
@@ -96,16 +96,18 @@ Result:
 script start, script end가 먼저 실행되는 건 당연한데, promise들이 setTimeout보다 먼저 실행 되었다.  
 Javascript 실행 환경은 일반 Task Queue(Macro Task Queue)외에 Microtask Queue 라는 큐가 한개 더 존재하며 일반 Task Queue 보다 더 높은 우선순위를 가진다.  
 즉, Task Queue와 Microtask Queue 모두에 대기중인 작업이 있더라도 Event Loop는 Microtask Queue의 작업을 먼저 옮겨간다.  
+
 ES6의 Promise가 Mircotask Queue에 저장되는 대표적인 예이다.
 
-Task Queue: setTimeout, setInterval, UI rendering   
-Microtask Queue: Promise
+
+> Task Queue: setTimeout, setInterval, UI rendering   
+> Microtask Queue: Promise
 
 브라우저 렌더링 엔진의 태스크는 일반 TasK Queue에 저장되기 때문에 Microtask Queue의 작업들이 너무 오랜시간이 걸린다면 사용자 경험에 큰 불편을 가져다 줄 수 있다.
 
 ## Event loop Visualization
-http://latentflip.com/loupe  
-https://www.jsv9000.app/
+<http://latentflip.com/loupe>  
+<https://www.jsv9000.app/>
 
 
 ## References
