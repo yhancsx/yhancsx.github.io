@@ -38,7 +38,7 @@ comments: true
 
 #### Detect Sticky trigger
 
-- [IntersectionObserver](https://stackoverflow.com/questions/16302483/event-to-detect-when-positionsticky-is-triggered) 
+- [Stack Overflow > IntersectionObserver](https://stackoverflow.com/questions/16302483/event-to-detect-when-positionsticky-is-triggered) 
 - [react-use > useIntersection](https://github.com/streamich/react-use/blob/master/docs/useIntersection.md)
 
 ```javascript
