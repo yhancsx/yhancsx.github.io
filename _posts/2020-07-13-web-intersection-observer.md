@@ -6,6 +6,7 @@ tags:
   - js
   - intersection observer
   - sticky
+  - lazy loading
 comments: true
 ---
 지난 [css sticky](https://yhancsx.github.io/web/web-css-position/) 에서 detection을 위해 사용했던 custom hooks에 쓰이며
@@ -45,11 +46,11 @@ tareget element|   < threshold 0.5
 
 ## Intersection Observer Entry
 #### Properties
-`isIntersecting`: 현재 target element가 root 내에서 보이고 있는지(intersection 인지) 여부. 이 값으로 교차하러 가는지 교차가 끝난지 구별 가능하다.
-`boundingClientRect`: 현재 target element rectagle의 bounds 요소 (DOMRectReadOnly: `x`, `y`, `width`, `height`, `top`, `right`, `bottom`, `left`). Element.getBoundingClientRect() 를 사용한다.
-`intersectionRect`: target element중 visible area bounds 요소.
-`rootBounds`: root element의 bounds 요소.
-`intersectionRatio`: 현재 intersection된 비율 (보이면 1, 안보이면 0).
+- `isIntersecting`: 현재 target element가 root 내에서 보이고 있는지(intersection 인지) 여부. 이 값으로 교차하러 가는지 교차가 끝난지 구별 가능하다.  
+- `boundingClientRect`: 현재 target element rectagle의 bounds 요소 (DOMRectReadOnly: `x`, `y`, `width`, `height`, `top`, `right`, `bottom`, `left`). Element.getBoundingClientRect() 를 사용한다.  
+- `intersectionRect`: target element중 visible area bounds 요소.  
+- `rootBounds`: root element의 bounds 요소.  
+- `intersectionRatio`: 현재 intersection된 비율 (보이면 1, 안보이면 0).  
 
 
 ## Refereces
