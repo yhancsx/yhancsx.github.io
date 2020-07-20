@@ -164,7 +164,7 @@ arrow function으로 정의하면 전역객체인 window를 가리킨다.
 정확한 원리는 공부해 봐야겠지만 객체 내부 메소드와 this 바인딩이 같다고 생각하면 쉬울 것 같다.
 
 #### prototype, yield
-화살표 함수에서는 prototype 속성을 사용할 수 없다.
+화살표 함수에서는 prototype 속성을 사용할 수 없다.  
 화살표 함수에서는 본문에 yield 키워드를 사용할 수 없다.
 
 ## References
