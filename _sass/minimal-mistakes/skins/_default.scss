@@ -1,5 +1,15 @@
 /* ==========================================================================
    Default skin
    ========================================================================== */
+@import '../_variables.scss';
 
 // Intentionally left blank
+$background-color: #eeeeee !default;
+$text-color: $dark-gray;
+$footer-background-color: mix(#000, $background-color, 30%) !default;
+$code-background-color: rgba(27,31,35, 0.2) ;
+
+article.archive__item > h2.archive__item-title > a {
+  color: $text-color;
+  //text-decoration: none;
+}
