@@ -21,7 +21,7 @@ comments: true
 10. 이벤트 버블링, 캡처링, 위임
 11. react class/functional component 차이  
 12. 상태관리, redux
-13. event loop
+13. [event loop](https://yhancsx.github.io/js/js-event-loop/)
 14. parameter 위변조 방지 방법  
 15. 프론트엔드 성능최적화
 16. ssr, csr 장단점, 차이  
