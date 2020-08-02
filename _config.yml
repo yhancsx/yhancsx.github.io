@@ -100,7 +100,7 @@ author:
   links:
     - label: "yhancsx@gmail.com"
       icon: "fas fa-fw fa-envelope-square"
-      url: "yhancsx@gmail.com"
+      url: "mailto:yhancsx@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/yhancsx"
