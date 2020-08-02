@@ -94,28 +94,19 @@ analytics:
 # Site Author
 author:
   name             : "yhancsx"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : # pat-fw-h of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Jr. Web Front-end Developer"
-  location         : "Korea"
+  location         : "Seoul, Republic of Korea"
   links:
     - label: "yhancsx@gmail.com"
       icon: "fas fa-fw fa-envelope-square"
       url: "yhancsx@gmail.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/yhancsx"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+    - label: "Linked-in"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/yohan-bae-343647148/"
 
 # Site Footer
 footer:
