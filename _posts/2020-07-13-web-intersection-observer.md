@@ -4,6 +4,8 @@ category: web
 tags:
   - web
   - js
+  - study
+  - front-end
   - intersection observer
   - sticky
   - lazy loading

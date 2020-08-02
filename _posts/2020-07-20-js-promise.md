@@ -101,7 +101,7 @@ const p = new Promise(resolve => {
 
 p (Promise)
 ├── __proto__: Promise
-├── [[PromiseStatus]]: "pending" -> "resolved"
+├── [[PromiseStatus]]: "pending" -> "fulfilled"
 └── [[PromiseValue]]: undefined -> 3
 ```
 - `pending`: Promise 객체가 생성되면 최초 Pending(대기) 상태가 된다.
@@ -220,6 +220,7 @@ Promise.any([
 가장 먼저 **resolve** 된 Promise 객체가 처리한 결과를 resolve 하는 새로운 Promise 객체를 리턴한다.  
 `Promise.all` 의 반대이다. 
 
+## Reference
 - [Captain Pangyo > 자바스크립트 Promise 쉽게 이해하기](https://joshua1988.github.io/web-development/javascript/promise-for-beginners/)
 - [PoiemaWeb > Promise](https://poiemaweb.com/es6-promise)
 - [Must Know About Frontend > es9~es10](https://github.com/baeharam/Must-Know-About-Frontend/blob/master/Notes/javascript/es9-es10.md)

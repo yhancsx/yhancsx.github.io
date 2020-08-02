@@ -3,6 +3,8 @@ title: "Web css position, sticky"
 category: web  
 tags:
   - web
+  - study
+  - front-end
   - css
   - position
   - sticky

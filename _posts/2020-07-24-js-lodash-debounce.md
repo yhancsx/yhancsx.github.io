@@ -4,6 +4,8 @@ category: js
 tags:
   - js
   - web
+  - study
+  - front-end
   - lodash
   - debounce
   - this
