@@ -4,12 +4,32 @@
 @import '../_variables.scss';
 
 // Intentionally left blank
-$background-color: #eeeeee !default;
+$background-color: #fff;
 $text-color: $dark-gray;
-$footer-background-color: mix(#000, $background-color, 30%) !default;
-$code-background-color: rgba(27,31,35, 0.2) ;
+$footer-background-color: mix(#000, $background-color, 10%);
+$code-background-color: rgba(27,31,35, 0.2);
 
 article.archive__item > h2.archive__item-title > a {
   color: $text-color;
-  //text-decoration: none;
 }
+
+@media (prefers-color-scheme: dark)  {
+    $background-color: #252a34 !global;
+    $text-color: $lighter-gray !global;
+    $masthead-link-color: $text-color !global;
+    $masthead-link-color-hover: mix(#000, $text-color, 20%) !global;
+    $footer-background-color: mix(#000, $background-color, 10%) !global;
+    $border-color: $gray !global;
+    $muted-text-color: $text-color !global;
+    $primary-color: $text-color !global;
+
+    article.archive__item > h2.archive__item-title > a {
+        color: $text-color;
+    }
+
+    svg.fa-github,
+    svg.fa-linkedin {
+        color: #fff !important;
+    }
+}
+
