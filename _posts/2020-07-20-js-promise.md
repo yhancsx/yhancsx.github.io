@@ -154,7 +154,7 @@ resolvedPromise.then(val => console.log(val) // => 3
 const rejectedPromise = Promise.reject(4);
 rejectedPromise.catch(val => console.log(val) // => 4
 ```
-원하는 값을 Promise 객체로 만들고 싶을 때 사용할 수 있다.
+원하는 값을 Promise 객체를 통해 전달하고 싶을 때 사용할 수 있다.
 
 #### Promise.all()
 ```javascript
