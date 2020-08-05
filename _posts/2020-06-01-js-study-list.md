@@ -17,8 +17,8 @@ comments: true
 6. 브라우저 렌더링 과정
 7. repaint/reflow 및 react에서의 적용
 8. CORS 의미 및 해결방법
-9. 콜백지옥, [promise](https://yhancsx.github.io/js/js-promise/), [async/await](https://yhancsx.github.io/js/async-await/)  
-10. 이벤트 버블링, 캡처링, 위임
+9. [콜백지옥, promise](https://yhancsx.github.io/js/js-promise/), [async/await](https://yhancsx.github.io/js/async-await/)  
+10. [이벤트 버블링, 캡처링, 위임](https://yhancsx.github.io/web/event-bubbling-capture-delegation/)
 11. react class/functional component 차이  
 12. 상태관리, redux
 13. [event loop](https://yhancsx.github.io/js/js-event-loop/)
