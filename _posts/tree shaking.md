@@ -1,3 +1,15 @@
+---
+title: "Javascript Tree Shaking"
+category: js
+tags:
+  - web
+  - study
+  - front-end
+  - javascript
+  - event
+  - react
+published: false
+---
 
 webpack bundle analyzer / source-map-explore
 
@@ -6,23 +18,36 @@ CommonJS는 tree-shaking이 안된다. ES Module에서만 tree-shaking을 할 �
 `import allComponent from "library"` 대신 `import { conponent } from "library"`;
 형태로 import 하면 대부분의 라이브러리가 tree-shaking이 된다.
 
-- antd 
+#### antd 
 
 build 하면 tree-shaking 이 되어서 import 되어있다. 대부분의 컴포넌트가 es 폴더에서 import 되어있다.es6+ 문법으로 작성한 것으로 보인다.
 
 babel-plugin-import 를 사용하면 lib 폴더의 컴포넌트를 import 하게 된다.
 
-- lodash
-
+#### lodash
+```
+import _ from "lodash"
+...
+_.sortBy(arr)
+...
+또는 
+```
 `import { sortBy } from "lodash"` 로 import 해주어도 tree-shaking이 잘 안된다.
+
+![lodash not_tree shaking](../assets/images/tree-shaking/lodash_not_tree_shaking.png)
 
 이는 lodash에서 각 요소들을 commonJS 형태로 export 하고 있기 때문이다.
 
-`babel-plugin-lodash` 를 설치해야한다.
+[`babel-plugin-lodash`](https://github.com/lodash/babel-plugin-lodash) 를 설치해야한다.
 
-- d3
+이 플러그 인을 사용하면 `import _ from "lodash'` 형태로 사용하여도 tree shaking 이 된다.
+
+![lodash tree shaking](../assets/images/tree-shaking/lodash_tree_shaking.png)
+
+#### d3
+
 `import * as d3 from 'd3'` 는 모든 d3 모듈을 다 불러온다.
-![d3 tree shaking](../assets/images/tree-shaking/d3_not_tree_shaking.png)
+![d3 not_tree shaking](../assets/images/tree-shaking/d3_not_tree_shaking.png)
 
 `import { foramt } from 'd3-format`을 사용하면 사용되는 모듈만을 불러온다.
 ![d3 tree shaking](../assets/images/tree-shaking/d3_tree_shaking.png)
