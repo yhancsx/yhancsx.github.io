@@ -130,6 +130,37 @@ ES6에서 Object.create라는 문법이 도입되었다
 생성된 객체의 프로토타입은 이 메소드의 첫번째 인수로 지정된다.
 new 연산자와는 조금 다른 방식이다.
 
+### Object.create() vs new 
+```javascipt
+var obj = {
+  a: 2,
+  m: function() {
+    return this.a + 1;
+  }
+};
+
+var p = Object.create(obj);
+
+p.__proto__  === obj // => true
+p.hasOwnProperty('m') // => false 
+```
+
+```javscript
+function Obj(){
+    this.a = 2;
+    this.m = functin(){return this.a+1;}
+}
+
+var P = new bj();
+
+P instanceof Obj // => true
+P.hasOwnProperty('m') // => true 
+P.__proto__ === Obj.prototype // => true 
+```
+
+`Object.create()` 는 인자로 전달된 객체를 프로토타입으로 하는 객체를 생성한다.  
+`new` 키워드는 인자로 전달된 객체의 인스턴스를 만든다. P의 프로토타입 객체(`__proto__`)는 Obj가 생성될 당시 생성된 프로토타입 객체(`Obj.prototype`)이다.
+
 ### Summary
 **면접에서 js prototype이 뭐냐고 물어볼때 어떻게 답해야 하는가**  
 생성자 함수로 생성한 객체들이 프로퍼티와 메서드를 공유하기 위해 사용하는 객체(Prototype Object)이다.  
