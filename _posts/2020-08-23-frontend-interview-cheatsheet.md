@@ -32,7 +32,7 @@ frontend 관련 중요한 개념들을 cheatsheet 형태로 정리해 보자.
 ## [var, let, const 차이](https://yhancsx.github.io/js/js-scope-hoisting-closure/)
 - 호이스팅 차이점
 - var 는 함수 스코프, let, const는 블록 스코프
-- let, cosnt 는 재선언 불가능, const는 재할당 불가능.
+- let, const 는 재선언 불가능, const는 재할당 불가능.
 
 ## [객체 생성 과정](https://doitnow-man.tistory.com/132)
 ```javascript
@@ -44,7 +44,7 @@ const obj = new Person('yhan', 28)
 ```
 - 빈 객체 생성 
 - 객체 property(name, age) 정의
-- 객체 Property에 인자 값 할당
+- 객체 property에 인자 값 할당
 - obj 변수에 객체 할당.
 - 참고: [함수생성과정](https://medium.com/@kkak10/javascript-function%EC%9D%B4-%EC%83%9D%EC%84%B1%EB%90%98%EB%8A%94-%EA%B3%BC%EC%A0%95-15b74ecb7164)
 
@@ -94,7 +94,7 @@ const obj = new Person('yhan', 28)
 - deconstructing
 - parameter default value, rest, spread
 - let, const
-- for ... of
+- [iterator/genterator/for...of](https://yhancsx.github.io/js/iterator-generator/)
 - Symbol
 - Map/Set/WeekMap/WeekSet
 - Promise
@@ -154,3 +154,5 @@ const obj = new Person('yhan', 28)
 ## client parameter 위변조 방지 방법
 
 ## ssr, csr
+
+## symbol
