@@ -54,6 +54,32 @@ tareget element|   < threshold 0.5
 - `rootBounds`: root element의 bounds 요소.  
 - `intersectionRatio`: 현재 intersection된 비율 (보이면 1, 안보이면 0).  
 
+## React
+```javascript
+function App () {
+  const ref = useRef();
+
+  useEffect(() => {
+    if (!ref?.current) return;
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 1.0,
+    };
+    const callback = (entries) => {
+      const entry = entries[0];
+      // ...
+    };
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(ref.current);
+
+    return () => observer && observer.disconnect();
+  }, [ref]);
+  
+  <Component ref={ref} />
+}
+```
+
 
 ## Refereces
 - [MDN > Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
