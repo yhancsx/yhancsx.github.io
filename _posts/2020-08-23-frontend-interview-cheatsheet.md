@@ -115,8 +115,9 @@ const obj = new Person('yhan', 28)
 ## 프론트엔드 성능최적화
 - [tree shaking](https://yhancsx.github.io/js/tree-shaking/)
 - [code splitting](https://reactjs.org/docs/code-splitting.html)
-- Server-side Rendering
+- [Server-side Rendering](https://yhancsx.github.io/web/server-side-rendering/) ([Exercise](https://github.com/yhancsx/ssr-example))
 - React.memo(): props shallow comparison 
+- [Image Lazy loading (Intersection Observer API)](https://yhancsx.github.io/web/web-intersection-observer/)
 
 ## React class/functional component 차이 및 사용
 1. class
