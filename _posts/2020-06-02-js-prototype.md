@@ -131,7 +131,7 @@ ES6에서 Object.create라는 문법이 도입되었다
 new 연산자와는 조금 다른 방식이다.
 
 ### Object.create() vs new 
-```javascipt
+```javascript
 var obj = {
   a: 2,
   m: function() {
@@ -145,7 +145,7 @@ p.__proto__  === obj // => true
 p.hasOwnProperty('m') // => false 
 ```
 
-```javscript
+```javascript
 function Obj(){
     this.a = 2;
     this.m = functin(){return this.a+1;}

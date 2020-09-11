@@ -12,9 +12,10 @@ tags:
 frontend 관련 중요한 개념들을 cheatsheet 형태로 정리해 보자.
 
 ## [javascript prototype 이란?](https://yhancsx.github.io/js/js-prototype/)
+- 생성자 함수로 생성한 객체들이 프로퍼티와 메소드를 공유하기 위해 사용하는 객체.
 - 객체지향과 상속을 구현하는 javascript의 방식.
 - 함수가 정의될때 prototype 객체가 생성된다.
-- prototype chaining을 통해 상속을 구현할 수 있다.
+- prototype link, chain을 통해 상속을 구현할 수 있다.
 - class는 인스턴스를 생성 할 수 있는 추상적 개념이지만, prototype은 그 자체로도 객체라는 것이 큰 차이점이다.
 - 프로토타입을 사용하면 객체들에 담을 속성/메소드를 한곳에서 관리하여 메모리 절약을 할 수 있다.
 
@@ -106,11 +107,11 @@ const obj = new Person('yhan', 28)
 - 서버에서 response 헤더의 `Access-Control-Allow-Origin` 값에 `이 리소스를 접근하는 것이 허용된 출처`를 명시하여야 한다. 
 - Preflight Request 방식: 본 요청을 보내기전에 예비 요청(OPTIONS 메소드 사용)을 한번 보내 이 요청을 보내는것이 안전한지 확인.
 - Simple Request 방식: 예비 요청없이 본 요청을 바로 보낸 후 CORS 위반 여부 확인.
-- Credentialed Request 방식: request 헤더에 추가 인증 정보(`credentials`: `same-origin` | `include` | `omit`)를 담아 보안을 강화하는 방법.
+- Credentialed Request 방식: request 헤더에 추가 인증 정보(`credentials`: `same-origin` || `include` || `omit`)를 담아 보안을 강화하는 방법.
 - 해결방법: 
-    1) 서버 측에서 `Access-Control-Allow-Origin` 세팅,
-    2) 클라이언트 측에서 `webpack-dev-server`의 proxy 기능 사용. 웹팩 개발 서버에서 요청을 받아 프록싱함. / CRA 사용 시 package.json proxy 값 설정.
-    3) img,script,style 태그의 src는 SOP 정책에서 제외됨.
+    - 서버 측에서 `Access-Control-Allow-Origin` 세팅.
+    - 클라이언트 측에서 `webpack-dev-server`의 proxy 기능 사용. 웹팩 개발 서버에서 요청을 받아 프록싱함. / CRA 사용 시 package.json proxy 값 설정.
+    - img,script,style 태그의 src는 SOP 정책에서 제외됨.
     
 ## 프론트엔드 성능최적화
 - [tree shaking](https://yhancsx.github.io/js/tree-shaking/)
