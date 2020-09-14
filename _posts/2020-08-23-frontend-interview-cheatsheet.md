@@ -155,6 +155,9 @@ const obj = new Person('yhan', 28)
 
 ## client parameter 위변조 방지 방법
 
-## ssr, csr
+## [ssr, csr](https://yhancsx.github.io/web/server-side-rendering/)
+- server-side rendering (universal rendering)
+- 초기 화면은 서버에서 rendering 하여 전달. 
+- 이후 js 코드 삽입(hydration)하여 SPA 처럼 동작.
 
 ## symbol
