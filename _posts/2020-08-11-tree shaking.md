@@ -28,19 +28,36 @@ rollup.js에서 처음 제시되었던 개념으로, 사용되지 않는 compone
 ## 내부 components
 
 ```javascript
-import library from "library";
-import * as library from "library";
+import components from "components";
+import * as components from "components";
 ```
 
 이 형태의 import 는 기본적으로 tree-shaking이 되지 않는다.
 
 ```javascript
-import { conponent } from "library";
+import { conponent } from "components";
 ```
 
 형태로 import 해주거나
 
 `package.json` 에서 [`sideEffects: false`](https://webpack.js.org/guides/tree-shaking/) 설정을 해주면 사용하지 않는 component들은 bundle 에 포함되지 않는다.
+
+**components/index.js**
+```javascript
+export { default as componentA } from 'components/componentA';
+export { default as componentB } from 'components/componentB';
+```
+
+각 폴더의 index 파일에서 해당 폴더 안의 모든 components들을 모아서 re-export 해주는 경우가 있다.
+
+**container/container.js**
+```javascript
+import { componentA } from 'components`
+```
+
+위 방식으로 componentA를 사용하며 다른 어디서도 componentB를 사용하지 않았더라도 최종 번들에는 componentB가 포함된다.
+
+이를 방지하기 위해서는 `sideEffects: false` 설정을 해주어야 한다.
 
 ## Dependencies
 
