@@ -119,6 +119,7 @@ const obj = new Person('yhan', 28)
 - [Server-side Rendering](https://yhancsx.github.io/web/server-side-rendering/) ([Exercise](https://github.com/yhancsx/ssr-example))
 - React.memo(): props shallow comparison 
 - [Image Lazy loading (Intersection Observer API)](https://yhancsx.github.io/web/web-intersection-observer/)
+- layout(reflow)/paint(repaint) 최소화. (ex. top 대신 transform)
 
 ## React class/functional component 차이 및 사용
 1. class
