@@ -150,7 +150,7 @@ setTimeout(() => console.timeEnd("fetching data"), 1000);
 ```
 
 #### Clearing
-```javscript
+```javascript
 console.clear()
 ```
 
