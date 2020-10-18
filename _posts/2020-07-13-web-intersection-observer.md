@@ -48,6 +48,7 @@ tareget element|   < threshold 0.5
 
 ## Intersection Observer Entry
 #### Properties
+- `target`: 현재 target element
 - `isIntersecting`: 현재 target element가 root 내에서 보이고 있는지(intersection 인지) 여부. 이 값으로 교차하러 가는지 교차가 끝난지 구별 가능하다.  
 - `boundingClientRect`: 현재 target element rectagle의 bounds 요소 (DOMRectReadOnly: `x`, `y`, `width`, `height`, `top`, `right`, `bottom`, `left`). Element.getBoundingClientRect() 를 사용한다.  
 - `intersectionRect`: target element중 visible area bounds 요소.  
