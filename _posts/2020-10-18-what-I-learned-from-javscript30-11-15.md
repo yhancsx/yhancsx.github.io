@@ -1,3 +1,15 @@
+---
+title: "What I Learned from Javascript30 (11~15)"
+category: web  
+tags:
+  - web
+  - front-end
+  - javascript
+  - html
+  - video
+  - keyboard
+---
+
 [Wes Bos](https://github.com/wesbos) 님의 Vanilla Javascript 강의인 [Javascript 30](https://javascript30.com)을 따라하며 새롭게 배운 내용들을 정리한 포스트입니다.
 
 ## 11. Custom Video Player
@@ -34,10 +46,10 @@ KeyboardEvent: key='a' | code='KeyA'
 KeyboardEvent: key='s' | code='KeyS'
 KeyboardEvent: key='d' | code='KeyD'
 ```
-대신 keyCode 대신 key, code 사용
+[keyCode](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode) 대신 
+key, [code](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code) 사용
 
-https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode
-https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
+
 
 ## 12. Key Sequence Detection
 
