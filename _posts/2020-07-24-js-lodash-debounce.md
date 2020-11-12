@@ -27,7 +27,7 @@ function debounce(func, wait, immediate) {
   	if (immediate && !timeout) func.apply(context, args);
   };
 }
-const onChange = (e) => { console.log(e) } //2
+const onChange = (e) => { console.log(e) } // 2
 const element = document.getElementById('element_id') // <div id="element_id>element</div>
 element.addEventListener('click', debounce(onChange))
 
@@ -54,7 +54,7 @@ function debounce(func, wait, immediate) {
   	clearTimeout(timeout);
   	timeout = setTimeout(()=> {
   		timeout = null;
-        console.log(this, arguments); // 1
+      console.log(this, arguments);
   		if (!immediate) func.apply(this, arguments);
   	}, wait);
   	if (immediate && !timeout) func.apply(this, arguments);
@@ -63,6 +63,26 @@ function debounce(func, wait, immediate) {
 ```
 
 화살표 함수를 이용해서 this, arguments 값을 복사하지 않고도 쓸 수 있다.
+
+
+#### Full ES6 Syntax
+```javascript
+const debounce = (func, wait) => {
+  let timeout;
+
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      func(...args);
+    }, wait);
+  };
+};
+```
+
+이전의 arrow function 문법을 사용하니, ES5와 ES6 문법이 섞여있다는 피드백을 받았다.
+
+ES6의 Rest, Spread 문법을 사용하여 새롭게 구현하였다.
+
 
 ## References
 - [you don't need > You Don`t Need Lodash Underscore > _.debounce](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_debounce)
