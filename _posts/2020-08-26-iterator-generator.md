@@ -28,7 +28,7 @@ for(const key in obj) {
 const array = [1,2,3,4,5]
 
 for(const value in array) {
-    console.log(value); // => 1, 2, 3, 4, 5
+    console.log(value); // => 0, 1, 2, 3, 4  // value가 아닌 index 값이 나옴.
 }
 ```
 ```javascript
@@ -38,10 +38,12 @@ for(let i = 0; i < str.length; i ++) {
     console.log(str[i]); // => a, b, c, d, e, f
 }
 for(const c in str) {
-    console.log(c); // => 0, 1, 2, 3, 4, 5  // character 가아닌 index 값이 나옴.
+    console.log(c); // => 0, 1, 2, 3, 4, 5  // character가 아닌 index 값이 나옴.
 }
 ```
 기존엔 index를 이용한 단순 for loop나, for...in 을 사용하여 객체, array, 문자열 등을 순회할 수 있었다.
+
+for...in 구문은 value가 아닌 key 값을 반환한다는 것에서 불편함이 있었다.
 
 C++, Java의 iterator와 같이 조금 더 다양한 순회 기능을 제공하기 위해 iterator, for...of 키워드 및 generator가 ES6에서 정의 되었다.
 
