@@ -46,7 +46,7 @@ TL;DR
 
 ![cssom_tree]({{site.url}}{{site.baseurl}}/assets/images/critical_rendering_path/cssom_tree.PNG)
 
-![cssom_document_stylesheets]({{site.url}}{{site.baseurl}}/assets/images/critical_rendering_path/cssom_document_stylesheets.PNG)
+![cssom_document_stylesheets]({{site.url}}{{site.baseurl}}/assets/images/critical_rendering_path/cssom_document_stylesheets.png)
 
 - html 파싱 중 css 파일 가리키는 link 태그 만나면 css 파일 요청하여 CSSOM 구축.
 - CSSOM 그려지기 전까지는 html 파싱 중지. (render blocking resource)
