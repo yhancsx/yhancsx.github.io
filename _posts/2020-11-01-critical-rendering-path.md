@@ -60,7 +60,7 @@ TL;DR
 
 ![combine_to_rendertree]({{site.url}}{{site.baseurl}}/assets/images/critical_rendering_path/constructing_render_tree.PNG)
 
-- DOM, CSSOM 구성이 완료되면(Render Ttree 구축 준비가 되) `DOMContentLoaded` 이벤트 발생.
+- DOM, CSSOM 구성이 완료되면(Render Ttree 구축 준비가 되면) `DOMContentLoaded` 이벤트 발생.
 - Visual representaion of the document.
 - header, meta, script 등 제외.
 - `display: none` 제외. (`visibilitiy: hidden` 은 포함)
