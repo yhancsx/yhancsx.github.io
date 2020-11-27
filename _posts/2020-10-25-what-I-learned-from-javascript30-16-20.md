@@ -23,9 +23,10 @@ tags:
 
 ## 16. Mouse Move Shadow
 
-#### offset Left, Top, Width, Height
+#### [offset Left, Top, Width, Height](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+![html_element_objects]({{site.url}}{{site.baseurl}}/assets/images/javascript30/html_element_objects.PNG){: width="300 height="300" })
 ```javascript
-const { offsetLeft,  offsetTop } = element 
+const { offsetLeft,  offsetTop } = htmlElement 
 ```
 Integer representing the offset to the [left, top] in pixels from the closest _relatively positioned_ parent element. 
 부모 노드로 부터의 오프셋 위치.
