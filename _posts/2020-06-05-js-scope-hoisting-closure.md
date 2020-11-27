@@ -109,26 +109,51 @@ Hello.prototype.say = function() {
   console.log('Hello, ' + this._name);
 }
 
-var hello1 = new Hello('yhan');
-hello1.say() // => Hello, yhan
-hello.__name = 'stupid'
-hello1.say() // => Hello, stupid
+var hello = new Hello('yhan');
+hello.say() // => Hello, yhan
+hello._name = 'stupid'
+hello.say() // => Hello, stupid
 ```
-네이밍 컨벤션을 이용해 `__name`이 프라이빗 변수라는 의미를 전달해 주어도, this를 통해 접근 가능하기 때문에 보안상 아무 소용이 없다.
+네이밍 컨벤션을 이용해 `_name`이 프라이빗 변수라는 의미를 전달해 주어도, this를 통해 접근 가능하기 때문에 보안상 아무 소용이 없다.
 
 클로저를 이용해 이 문제를 해결할 수 있다.
 ```javascript
 function hello(name) {
   var _name = name;
+  
   return function() {
     console.log('Hello, ' + _name);
   };
 }
 
-var hello1 = hello('yhan');
-hello1() // => Hello, yhan
+var hi = hello('yhan');
+hi() // => Hello, yhan
 ```
-다른 인터페이스를 제공하는 것이 아니라면, 외부에서 name에 접근해 값을 바꿀 방법이 전혀 없게 되었다.
+다른 인터페이스를 제공하는 것이 아니라면, 외부에서 `_name`에 접근해 값을 바꿀 방법이 전혀 없게 되었다.
+
+```javascript
+var Hello = (function(){
+  var _name;
+  
+  // constructor
+  function Hello(name) {
+    _name = name;
+  }
+  
+  // public method
+  Hello.prototype.say = function() {
+    console.log('Hello, ' + _name);
+  }
+  
+  return Hello;
+})();
+
+var hello = new Hello('yhan');
+hello.say() // => Hello, yhan
+hello._name = 'stupid'
+hello.say() // => Hello, yhan
+```
+ES6 이전에는 이러한 성질을 이용하여 객체지향 프로그래밍(Class)를 흉내 내기도 했다.
 
 ```javascript
 function counter() {
