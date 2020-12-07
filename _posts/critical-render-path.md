@@ -69,6 +69,7 @@ viewport의 크기는 device width와 같아야 하며, 초기 로딩시 scale 1
 ## References
 - [Google Web Fundamentals > Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path)
 - [브라우저는 웹페이지를 어떻게 그리나요? - Critical Rendering Path](https://post.naver.com/viewer/postView.nhn?volumeNo=8431285&memberNo=34176766)
+- [How Browsers Work: Behind the scenes of modern web browser](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#Render_tree_construction)
 - [Udacity Course > Website Performance Optimization](https://www.udacity.com/course/website-performance-optimization--ud884)
 - [JSConf EU 2015 > Ryan Seddon:  So how does the browser actually render a website](https://www.youtube.com/watch?v=SmE4OwHztCc&feature=emb_title)
 - [Naver D2 > 하드웨어 가속에 대한 이해와 적용](https://d2.naver.com/helloworld/2061385)
