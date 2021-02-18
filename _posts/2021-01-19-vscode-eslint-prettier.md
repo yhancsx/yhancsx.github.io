@@ -136,9 +136,9 @@ module.exports = {
 
 
 ## VSCODE 적용
-[!ESLint Plugin]({{site.url}}{{site.baseurl}}/assets/images/vscode_eslint_prettier/eslint.PNG)
+![ESLint Plugin]({{site.url}}{{site.baseurl}}/assets/images/vscode_eslint_prettier/eslint.PNG)
 - ESlint Plugin 설치.
-[!Prettier Plugin]({{site.url}}{{site.baseurl}}/assets/images/vscode_eslint_prettier/prettier.PNG)
+![Prettier Plugin]({{site.url}}{{site.baseurl}}/assets/images/vscode_eslint_prettier/prettier.PNG)
 - Prettier Plugin 설치.		
         
 **setting.json**
