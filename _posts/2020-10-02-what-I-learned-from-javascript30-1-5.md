@@ -47,7 +47,7 @@ const hadler = (e) => {
 
 
 #### Transition-end event
-```
+```javascript
 element.addEventListener("transitionend", handler);
 ```
 
