@@ -98,7 +98,7 @@ if(window.scrollY >= topOfNav) {
 }
 ```
 
-## 25. Event Capture, Propagation, Bubbling and Once(https://yhancsx.github.io/web/event-bubbling-capture-delegation/)
+## 25.[ Event Capture, Propagation, Bubbling and Once](https://yhancsx.github.io/web/event-bubbling-capture-delegation/)
 
 #### once
 - event listener가 설정된 이후 최대 1번만 실행.
