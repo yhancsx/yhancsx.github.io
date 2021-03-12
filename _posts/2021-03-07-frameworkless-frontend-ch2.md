@@ -60,7 +60,7 @@ window.requestAnimationFrame(() => {
 
 view 함수를 통해 main component를 업데이트 한다.
 
-> [ChildNode.replaceWith(nodes)](https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/replaceWith): 현재 노드를 새로운 노드로 대체한다.
+> [childNode.replaceWith(newNodes)](https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/replaceWith): 현재 노드(childNode)를 새로운 노드(newNodes)로 대체한다.
 
 **app.js**
 ```javascript
