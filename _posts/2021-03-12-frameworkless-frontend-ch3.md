@@ -42,6 +42,7 @@ Capture Phase -> Target Phase -> Bubbling Phase
 
 
 #### 사용자 정의 이벤트 사용 - Chapter3/00.4
+
 **index.js**
 ```javascript
 input.addEventListener('input', () => {
@@ -124,7 +125,8 @@ const render = () => {
     const newMain = registry.renderRoot(
       main,
       state,
-      events)
+      events
+    )
 
     applyDiff(document.body, main, newMain)
   })
