@@ -17,6 +17,8 @@ tags:
   - Rest API
 ---
 
+*Francesco Strazzullo*님의 [프레임워크 없는 프론트 엔드 개발](https://book.naver.com/bookdb/book_detail.nhn?bid=17758920)(원제 Frameworkless Frontend Development)을 읽고 요악하는 포스트입니다.
+
 ## AJAX의 탄생
 
 199년 이전에는 서버에서 데이터를 가져와야 할때 마다 전체 페이지를 다시 로드해야 했다. 1999년 아웃룩, 지메일과 구글 지도 같은 어플리케이션들은 페이지를 다시 로드하지 않고 필요한 데이터만 서버에서 로드하는 새로운 기술을 사용하기 시작했다. 이 기술은 Asynchronous Javascript And XML (AJAX)로 명명되었다.

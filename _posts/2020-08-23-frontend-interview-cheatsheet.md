@@ -107,7 +107,7 @@ const obj = new Person('yhan', 28)
 - 서버에서 response 헤더의 `Access-Control-Allow-Origin` 값에 `이 리소스를 접근하는 것이 허용된 출처`를 명시하여야 한다. 
 - Preflight Request 방식: 본 요청을 보내기전에 예비 요청(OPTIONS 메소드 사용)을 한번 보내 이 요청을 보내는것이 안전한지 확인.
 - Simple Request 방식: 예비 요청없이 본 요청을 바로 보낸 후 CORS 위반 여부 확인.
-- Credentialed Request 방식: request 헤더에 추가 인증 정보(`credentials`: `same-origin` || `include` || `omit`)를 담아 보안을 강화하는 방법.
+- Credentialed Request 방식: request 헤더에 추가 인증 정보(`credentials`: `same-origin` or `include` or `omit`)를 담아 보안을 강화하는 방법.
 - 해결방법: 
     - 서버 측에서 `Access-Control-Allow-Origin` 세팅.
     - 클라이언트 측에서 `webpack-dev-server`의 proxy 기능 사용. 웹팩 개발 서버에서 요청을 받아 프록싱함. / CRA 사용 시 package.json proxy 값 설정.
@@ -120,6 +120,7 @@ const obj = new Person('yhan', 28)
 - React.memo(): props shallow comparison 
 - [Image Lazy loading (Intersection Observer API)](https://yhancsx.github.io/web/web-intersection-observer/)
 - layout(reflow)/paint(repaint) 최소화. (ex. top 대신 transform)
+- debounce, throttling
 
 ## React class/functional component 차이 및 사용
 1. class
@@ -162,3 +163,5 @@ const obj = new Person('yhan', 28)
 - 이후 js 코드 삽입(hydration)하여 SPA 처럼 동작.
 
 ## symbol
+
+## Array-like object
