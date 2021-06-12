@@ -32,7 +32,7 @@ tags:
 - `Cmd + Opt + I` (Mac) or `Ctrl + Shift + I` (Windows)
 
 FPS 측정  
-![chrome_devtools_fps]({{site.url}}{{site.baseurl}}/assets/images/frameworkless_frontend/chrome_devtools_fps.png){: width="300 height="300" }  
+![chrome_devtools_fps]({{site.url}}{{site.baseurl}}/assets/images/frameworkless_frontend/chrome_devtools_fps.png){: width="300" height="300" }  
 `Cmd + Shift + P` > `Show frame per seconds (FPS) meter`
 
 #### stats.js

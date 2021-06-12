@@ -9,7 +9,11 @@ tags:
   - frameworkless
   - vanillajs
   - router
-  - 
+  - fragment identifiers
+  - History API
+  - SPA
+  - dataset
+  - regex expression
 ---
 
 *Francesco Strazzullo*님의 [프레임워크 없는 프론트 엔드 개발](https://book.naver.com/bookdb/book_detail.nhn?bid=17758920)(원제 Frameworkless Frontend Development)을 읽고 요악하는 포스트입니다.

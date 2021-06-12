@@ -383,5 +383,3 @@ axios는 cross-site request나 XSRF에 대한 보호 시스템이 내장되어 �
 #### 학습 곡선
 
 axios나 Fetch API는 초보자가 의미를 이해하기 더 쉬울 것이다. XMLHttpRequest는 콜백 작업이 익숙하지 않은 개발자에게 이상하게 보일 수 있다.
-
-

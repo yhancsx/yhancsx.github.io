@@ -220,7 +220,7 @@ constructor를 통해 Loading Image를 먼저 표시한 후 API를 이용해 use
 
 이는 3장에서 사용했던 사용자 정의 이벤트를 통해 구현할 수 있다.
 
-**Chapter 4/00.5 > GithubAvatar.js**
+**Chapter4/00.5 > GithubAvatar.js**
 ```javascript
 export const EVENTS = {
   AVATAR_LOAD_COMPLETE,
@@ -270,7 +270,7 @@ export default class GitHubAvatar extends HTMLElement {
 }
 ```
 
-**Chapter 4/00.5 > index.js**
+**Chapter4/00.5 > index.js**
 ```javascript
 avatar
   .addEventListener(
@@ -281,7 +281,7 @@ avatar
 
 외부에서 다음과 같이 이벤트 핸들러를 연결할 수 있다.
 
-## Todo 앱에 사용 - Chapter 4/01
+## Todo 앱에 사용 - Chapter4/01
 
 **Application.js**
 ```javascript
